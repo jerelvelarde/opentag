@@ -1,23 +1,24 @@
-# OpenTag — a Slack agent starter, built on CopilotKit
+# OpenTag — an open-source alternative to Claude in Slack
 
-OpenTag is a **runnable Slack agent you can clone and make your own**. It's built on
-**[`@copilotkit/bot`](https://github.com/CopilotKit/CopilotKit/tree/main/packages/bot)** —
-CopilotKit's SDK for building chat-platform agents (Slack first; the same code also runs on
-Discord, Telegram, and WhatsApp).
+Run your own AI agent inside Slack — it reads a thread, answers, calls your tools, and
+renders rich results right in the conversation. Think of it as having Claude in your
+workspace, except **open-source and self-hosted**: you own the runtime, bring your own
+model, and wire it to your own tools. No per-seat pricing, no lock-in.
 
-Out of the box it ships as an on-call triage assistant — @mention it in a thread and it
-answers, files issues, and renders charts inline — but that's just the example. The point is
-the **starting point**: a clean, real Slack agent you can bend to whatever your team needs.
+It's built on **[`@copilotkit/bot`](https://github.com/CopilotKit/CopilotKit/tree/main/packages/bot)** —
+CopilotKit's open SDK for chat-platform agents (Slack first; the same code also runs on
+Discord, Telegram, and WhatsApp). Clone it, point it at your model and tools, and you own
+the whole stack.
 
 ## See it in action
 
 https://github.com/user-attachments/assets/a74fa1cb-add0-463e-a23c-aa09b95d5135
 
-▶️ **[Watch the demo](https://github.com/user-attachments/assets/a74fa1cb-add0-463e-a23c-aa09b95d5135)** (~50s) — the agent working a Slack thread: it renders a breakdown, a table, and a bar chart inline (**generative UI**) and files a ticket only after an **Approve** gate (**human-in-the-loop**).
+▶️ **[Watch the demo](https://github.com/user-attachments/assets/a74fa1cb-add0-463e-a23c-aa09b95d5135)** (~50s) — an OpenTag agent working a Slack thread: it renders a breakdown, a table, and a bar chart inline (**generative UI**) and files a ticket only after an **Approve** gate (**human-in-the-loop**).
 
-> 🚀 **Building a real Slack agent?** The CopilotKit Slack bot SDK is in early access. **[Sign up for early access →](https://docs.copilotkit.ai/slack)** — or **[talk to an engineer](https://copilotkit.ai/talk-to-an-engineer)**.
+> **Two ways to run it:** **host it yourself** with the open-source SDK below — or skip the ops and **[sign up for the managed service →](https://go.copilotkit.ai/beyond-the-web-form)** (coming soon).
 
-## Quick start
+## Quick start (self-hosted)
 
 OpenTag ships inside the [CopilotKit monorepo](https://github.com/CopilotKit/CopilotKit) as a
 first-class example (`examples/slack`) — that's the dependable way to run it today while the
@@ -37,7 +38,7 @@ then grab the **Bot User OAuth Token** (`xoxb-…`) and an **App-Level Token** (
 ```bash
 SLACK_BOT_TOKEN=xoxb-...
 SLACK_APP_TOKEN=xapp-...
-OPENAI_API_KEY=sk-...
+OPENAI_API_KEY=sk-...      # or ANTHROPIC_API_KEY — bring your own model
 ```
 
 **3. Run it** from the CopilotKit monorepo root:
@@ -70,15 +71,15 @@ OpenTag is deliberately small and hackable:
 The full architecture, the file-by-file map, and every integration live in
 **[setup.md](./setup.md)**.
 
-## Going to production?
+## Don't want to host it yourself?
 
-OpenTag is the open, runnable starting point. When you're ready to ship an agent for real,
-**CopilotKit's managed Intelligence Platform** (coming soon) is the production layer beside your
-runtime — durable threads, persistence, hosted inspection, and **Continuous Learning from Human
-Feedback** (agents that improve with every interaction). Learn more about
+Self-hosting means you run and scale the runtime, persistence, and inspection tooling yourself.
+A **managed CopilotKit service** is coming soon — the same agent, without the ops: durable
+threads, persistence, hosted inspection, and agents that improve from feedback (**Continuous
+Learning from Human Feedback**). Read more about
 [CopilotKit Intelligence](https://www.copilotkit.ai/copilotkit-intelligence).
 
-- **[Sign up for Intelligence →](https://go.copilotkit.ai/enterprise-intelligence-platform)** — the managed production platform (coming soon).
+- **[Sign up for early access →](https://go.copilotkit.ai/beyond-the-web-form)** — be first in when the managed service opens.
 - **[Talk to an engineer →](https://copilotkit.ai/talk-to-an-engineer)** — building something real on this? We'd love to help you ship it.
 
 ## Learn more

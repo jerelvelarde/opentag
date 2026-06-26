@@ -2,7 +2,7 @@
   "name": "opentag",
   "version": "0.2.0",
   "private": true,
-  "description": "OpenTag — a runnable CopilotKit bot: an on-call triage assistant for Slack, Discord, Telegram &/or WhatsApp, backed by Linear + Notion over MCP, with a confirm-before-write HITL gate and chart/diagram/table rendering. Built on @copilotkit/bot.",
+  "description": "OpenTag — an open-source, self-hosted alternative to Claude in Slack: run your own AI agent on your infrastructure, with your model and your tools. Built on @copilotkit/bot; also runs on Discord, Telegram & WhatsApp.",
   "license": "MIT",
   "type": "module",
   "scripts": {
